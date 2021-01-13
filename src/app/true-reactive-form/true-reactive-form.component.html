@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    {{ registrationForm.value | json}}
+    <form [formGroup]="registrationForm">
+        <div class="form-group">
+            <label for="">Username</label>
+            <input formControlName="userName" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">password</label>
+            <input formControlName="password" type="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Confirm Password</label>
+            <input formControlName="confirmPassword" type="password" class="form-control">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-secondary" (click)="loadData()">addData</button>
+    </form>
+</div>
